@@ -3,6 +3,9 @@ Sistema de inventario con POO.
 Gestión de productos con operaciones de inventario.
 """
 
+from typing import Optional
+
+
 class Producto:
     """Clase que representa un producto en el inventario."""
 
@@ -64,7 +67,7 @@ class Inventario:
         self.productos.append(producto)
         print(f"Producto '{producto.nombre}' agregado al inventario.")
 
-    def buscar_producto(self, nombre: str) -> Producto:
+    def buscar_producto(self, nombre: str) -> Optional[Producto]:
         """
         Busca un producto por su nombre.
         Búsqueda exacta, insensible a mayúsculas/minúsculas.
